@@ -1,0 +1,197 @@
+Microsoft Windows [Version 10.0.22631.3810]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\chinn\OneDrive\Desktop>ssh -i "./loging.pem" ec2-user@13.60.41.203
+The authenticity of host '13.60.41.203 (13.60.41.203)' can't be established.
+ED25519 key fingerprint is SHA256:uJxdNAZuhNKnEczfgtQEM2ry5sAO/zAaaHVUQ4dmjho.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '13.60.41.203' (ED25519) to the list of known hosts.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[ec2-user@ip-172-31-38-230 ~]$ ls
+[ec2-user@ip-172-31-38-230 ~]$ echo "Hello" >>main.txt
+[ec2-user@ip-172-31-38-230 ~]$ ls
+main.txt
+[ec2-user@ip-172-31-38-230 ~]$ cat main.txt
+Hello
+[ec2-user@ip-172-31-38-230 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-38-230 ~]$ who am i
+ec2-user pts/0        2024-07-11 05:10 (152.59.204.112)
+[ec2-user@ip-172-31-38-230 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-38-230 ~]$ exit
+logout
+Connection to 13.60.41.203 closed.
+
+C:\Users\chinn\OneDrive\Desktop>chmod 400 ./loging.pem
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\chinn\OneDrive\Desktop>ssh -i ./loging.pem
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command]
+
+C:\Users\chinn\OneDrive\Desktop>ssh -i "./loging.pem" ec2-user@13.60.41.203
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Thu Jul 11 05:10:19 2024 from 152.59.204.112
+[ec2-user@ip-172-31-38-230 ~]$ lsclient_loop: send disconnect: Connection reset
+
+C:\Users\chinn\OneDrive\Desktop>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\chinn\OneDrive\Desktop>ssh -i "./loging.pem" ec2-user@13.60.41.203
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Thu Jul 11 05:18:54 2024 from 152.59.204.112
+[ec2-user@ip-172-31-38-230 ~]$ ls
+main.txt
+[ec2-user@ip-172-31-38-230 ~]$
+[ec2-user@ip-172-31-38-230 ~]$ sudo yum update -y
+Last metadata expiration check: 0:41:31 ago on Thu Jul 11 04:56:45 2024.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[ec2-user@ip-172-31-38-230 ~]$ sudo yum install -y nodejs npm git
+Last metadata expiration check: 0:43:10 ago on Thu Jul 11 04:56:45 2024.
+Dependencies resolved.
+=====================================================================================================================================
+ Package                        Architecture         Version                                         Repository                 Size
+=====================================================================================================================================
+Installing:
+ git                            x86_64               2.40.1-1.amzn2023.0.3                           amazonlinux                54 k
+ nodejs                         x86_64               1:18.18.2-1.amzn2023.0.5                        amazonlinux                14 M
+ nodejs-npm                     x86_64               1:9.8.1-1.18.18.2.1.amzn2023.0.5                amazonlinux               2.0 M
+Installing dependencies:
+ git-core                       x86_64               2.40.1-1.amzn2023.0.3                           amazonlinux               4.3 M
+ git-core-doc                   noarch               2.40.1-1.amzn2023.0.3                           amazonlinux               2.6 M
+ libbrotli                      x86_64               1.0.9-4.amzn2023.0.2                            amazonlinux               315 k
+ nodejs-libs                    x86_64               1:18.18.2-1.amzn2023.0.5                        amazonlinux                14 M
+ perl-Error                     noarch               1:0.17029-5.amzn2023.0.2                        amazonlinux                41 k
+ perl-File-Find                 noarch               1.37-477.amzn2023.0.6                           amazonlinux                26 k
+ perl-Git                       noarch               2.40.1-1.amzn2023.0.3                           amazonlinux                42 k
+ perl-TermReadKey               x86_64               2.38-9.amzn2023.0.2                             amazonlinux                36 k
+ perl-lib                       x86_64               0.65-477.amzn2023.0.6                           amazonlinux                15 k
+Installing weak dependencies:
+ nodejs-docs                    noarch               1:18.18.2-1.amzn2023.0.5                        amazonlinux               7.6 M
+ nodejs-full-i18n               x86_64               1:18.18.2-1.amzn2023.0.5                        amazonlinux               8.5 M
+
+Transaction Summary
+=====================================================================================================================================
+Install  14 Packages
+
+Total download size: 54 M
+Installed size: 267 M
+Downloading Packages:
+(1/14): git-2.40.1-1.amzn2023.0.3.x86_64.rpm                                                         1.0 MB/s |  54 kB     00:00
+(2/14): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.rpm                                                    7.6 MB/s | 315 kB     00:00
+(3/14): git-core-2.40.1-1.amzn2023.0.3.x86_64.rpm                                                     31 MB/s | 4.3 MB     00:00
+(4/14): git-core-doc-2.40.1-1.amzn2023.0.3.noarch.rpm                                                 16 MB/s | 2.6 MB     00:00
+(5/14): nodejs-docs-18.18.2-1.amzn2023.0.5.noarch.rpm                                                 55 MB/s | 7.6 MB     00:00
+(6/14): nodejs-full-i18n-18.18.2-1.amzn2023.0.5.x86_64.rpm                                            45 MB/s | 8.5 MB     00:00
+(7/14): nodejs-18.18.2-1.amzn2023.0.5.x86_64.rpm                                                      39 MB/s |  14 MB     00:00
+(8/14): nodejs-npm-9.8.1-1.18.18.2.1.amzn2023.0.5.x86_64.rpm                                          14 MB/s | 2.0 MB     00:00
+(9/14): perl-Error-0.17029-5.amzn2023.0.2.noarch.rpm                                                 1.3 MB/s |  41 kB     00:00
+(10/14): nodejs-libs-18.18.2-1.amzn2023.0.5.x86_64.rpm                                                43 MB/s |  14 MB     00:00
+(11/14): perl-File-Find-1.37-477.amzn2023.0.6.noarch.rpm                                             238 kB/s |  26 kB     00:00
+(12/14): perl-Git-2.40.1-1.amzn2023.0.3.noarch.rpm                                                   400 kB/s |  42 kB     00:00
+(13/14): perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64.rpm                                             2.0 MB/s |  36 kB     00:00
+(14/14): perl-lib-0.65-477.amzn2023.0.6.x86_64.rpm                                                   858 kB/s |  15 kB     00:00
+-------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                 78 MB/s |  54 MB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Running scriptlet: nodejs-1:18.18.2-1.amzn2023.0.5.x86_64                                                                      1/1
+  Preparing        :                                                                                                             1/1
+  Installing       : nodejs-docs-1:18.18.2-1.amzn2023.0.5.noarch                                                                1/14
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                      2/14
+  Installing       : git-core-2.40.1-1.amzn2023.0.3.x86_64                                                                      3/14
+  Installing       : git-core-doc-2.40.1-1.amzn2023.0.3.noarch                                                                  4/14
+  Installing       : nodejs-libs-1:18.18.2-1.amzn2023.0.5.x86_64                                                                5/14
+  Installing       : nodejs-full-i18n-1:18.18.2-1.amzn2023.0.5.x86_64                                                           6/14
+  Installing       : nodejs-npm-1:9.8.1-1.18.18.2.1.amzn2023.0.5.x86_64                                                         7/14
+  Installing       : nodejs-1:18.18.2-1.amzn2023.0.5.x86_64                                                                     8/14
+  Installing       : perl-lib-0.65-477.amzn2023.0.6.x86_64                                                                      9/14
+  Installing       : perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64                                                               10/14
+  Installing       : perl-File-Find-1.37-477.amzn2023.0.6.noarch                                                               11/14
+  Installing       : perl-Error-1:0.17029-5.amzn2023.0.2.noarch                                                                12/14
+  Installing       : perl-Git-2.40.1-1.amzn2023.0.3.noarch                                                                     13/14
+  Installing       : git-2.40.1-1.amzn2023.0.3.x86_64                                                                          14/14
+  Running scriptlet: git-2.40.1-1.amzn2023.0.3.x86_64                                                                          14/14
+  Verifying        : git-2.40.1-1.amzn2023.0.3.x86_64                                                                           1/14
+  Verifying        : git-core-2.40.1-1.amzn2023.0.3.x86_64                                                                      2/14
+  Verifying        : git-core-doc-2.40.1-1.amzn2023.0.3.noarch                                                                  3/14
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                      4/14
+  Verifying        : nodejs-1:18.18.2-1.amzn2023.0.5.x86_64                                                                     5/14
+  Verifying        : nodejs-docs-1:18.18.2-1.amzn2023.0.5.noarch                                                                6/14
+  Verifying        : nodejs-full-i18n-1:18.18.2-1.amzn2023.0.5.x86_64                                                           7/14
+  Verifying        : nodejs-libs-1:18.18.2-1.amzn2023.0.5.x86_64                                                                8/14
+  Verifying        : nodejs-npm-1:9.8.1-1.18.18.2.1.amzn2023.0.5.x86_64                                                         9/14
+  Verifying        : perl-Error-1:0.17029-5.amzn2023.0.2.noarch                                                                10/14
+  Verifying        : perl-File-Find-1.37-477.amzn2023.0.6.noarch                                                               11/14
+  Verifying        : perl-Git-2.40.1-1.amzn2023.0.3.noarch                                                                     12/14
+  Verifying        : perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64                                                               13/14
+  Verifying        : perl-lib-0.65-477.amzn2023.0.6.x86_64                                                                     14/14
+
+Installed:
+  git-2.40.1-1.amzn2023.0.3.x86_64                                     git-core-2.40.1-1.amzn2023.0.3.x86_64
+  git-core-doc-2.40.1-1.amzn2023.0.3.noarch                            libbrotli-1.0.9-4.amzn2023.0.2.x86_64
+  nodejs-1:18.18.2-1.amzn2023.0.5.x86_64                               nodejs-docs-1:18.18.2-1.amzn2023.0.5.noarch
+  nodejs-full-i18n-1:18.18.2-1.amzn2023.0.5.x86_64                     nodejs-libs-1:18.18.2-1.amzn2023.0.5.x86_64
+  nodejs-npm-1:9.8.1-1.18.18.2.1.amzn2023.0.5.x86_64                   perl-Error-1:0.17029-5.amzn2023.0.2.noarch
+  perl-File-Find-1.37-477.amzn2023.0.6.noarch                          perl-Git-2.40.1-1.amzn2023.0.3.noarch
+  perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64                          perl-lib-0.65-477.amzn2023.0.6.x86_64
+
+Complete!
+[ec2-user@ip-172-31-38-230 ~]$ ls
+main.txt
+[ec2-user@ip-172-31-38-230 ~]$ git -v
+git version 2.40.1
+[ec2-user@ip-172-31-38-230 ~]$ node -v
+v18.18.2
+[ec2-user@ip-172-31-38-230 ~]$ mkdir test
+[ec2-user@ip-172-31-38-230 ~]$ ls
+main.txt  test
+[ec2-user@ip-172-31-38-230 ~]$ cd test
+[ec2-user@ip-172-31-38-230 test]$ touch index.js
+[ec2-user@ip-172-31-38-230 test]$ vim index.js
+[ec2-user@ip-172-31-38-230 test]$ node index.js
+Node is working
+[ec2-user@ip-172-31-38-230 test]$ "To save a file use esc then :wq and enter"
+-bash: To save a file use esc then :wq and enter: command not found
+[ec2-user@ip-172-31-38-230 test]$
