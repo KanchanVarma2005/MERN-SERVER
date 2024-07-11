@@ -11,6 +11,7 @@ type User {
 type Query {
  getUser(id:ID!):User
  getUsers:[User]
+ getAllUsers:[User]
 }
 input createUserInput{
  name:String!,
